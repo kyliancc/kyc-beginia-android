@@ -1,5 +1,7 @@
 package com.kyliancc.beginia_android
 
+import com.kyliancc.beginia_android.data.http.BeginiaClient
+import kotlinx.coroutines.runBlocking
 import org.junit.Test
 
 import org.junit.Assert.*
@@ -13,5 +15,12 @@ class ExampleUnitTest {
     @Test
     fun addition_isCorrect() {
         assertEquals(4, 2 + 2)
+    }
+    @Test
+    fun requests_test() {
+        runBlocking {
+            val todoDocs = BeginiaClient.todoDocsService.getAllTodoDocs()
+            println(todoDocs)
+        }
     }
 }
