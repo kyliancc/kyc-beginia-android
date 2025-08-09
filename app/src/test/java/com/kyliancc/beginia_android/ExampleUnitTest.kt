@@ -19,7 +19,7 @@ class ExampleUnitTest {
     @Test
     fun requests_test() {
         runBlocking {
-            val todoDocs = BeginiaClient.todoDocsService.getAllTodoDocs()
+            val todoDocs = BeginiaClient.docsService.getAllTodoDocs()
             println(todoDocs)
         }
     }

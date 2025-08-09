@@ -1,4 +1,4 @@
-package com.kyliancc.beginia_android.ui.tododocs
+package com.kyliancc.beginia_android.ui.docs
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
@@ -13,15 +13,17 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.kyliancc.beginia_android.model.TodoDocItem
+import java.util.Date
 
 @Composable
-fun TodoItem() {
+fun TodoDocItemView(doc: TodoDocItem) {
     Row(
         modifier = Modifier.fillMaxWidth(),
         horizontalArrangement = Arrangement.SpaceBetween,
         verticalAlignment = Alignment.CenterVertically
     ) {
-        Text("123")
+        Text(doc.name)
         Row {
             IconButton(onClick = {}) {
                 Icon(Icons.Outlined.Edit, null)
@@ -35,6 +37,7 @@ fun TodoItem() {
 
 @Preview(showBackground = true)
 @Composable
-fun TodoItemPreview() {
-    TodoItem()
+fun TodoDocItemViewPreview() {
+    TodoDocItemView(
+        TodoDocItem(1, Date(), "test", "test", 1, mutableListOf("abc")))
 }

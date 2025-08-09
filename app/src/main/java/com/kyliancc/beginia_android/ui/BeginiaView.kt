@@ -7,7 +7,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.kyliancc.beginia_android.ui.theme.BeginiaTheme
-import com.kyliancc.beginia_android.ui.tododocs.TodoView
+import com.kyliancc.beginia_android.ui.docs.DocsView
 
 @Composable
 fun BeginiaView() {
@@ -24,7 +24,7 @@ fun BeginiaView() {
 
 @Composable
 fun Content(innerPadding: PaddingValues) {
-    TodoView(innerPadding)
+    DocsView(innerPadding)
 }
 
 @Preview(showBackground = true)

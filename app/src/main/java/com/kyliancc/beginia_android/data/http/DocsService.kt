@@ -10,7 +10,7 @@ import retrofit2.http.GET
 import retrofit2.http.POST
 import retrofit2.http.Path
 
-interface TodoDocsService {
+interface DocsService {
     @POST("/api/v1/docs/create")
     suspend fun createDoc(@Body doc: TodoDocItem)
 
